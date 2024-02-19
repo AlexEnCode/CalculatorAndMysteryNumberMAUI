@@ -57,7 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\ecran.jpg" />
+	  <None Remove="Resources\Images\ecran.png" />
 	</ItemGroup>
 
 	<ItemGroup>
