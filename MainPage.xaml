@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <StackLayout Margin="20">
+                <Label Text="Le jeu du nombre mystère!" FontSize="30" HorizontalOptions="Center" Margin="10,0,0,20"/>
+
+                <Label Text="Cherchez le nombre mystère entre 1 et 20! Nous vous dirons si votre proposition est trop petite, ou bien trop grande!" FontSize="12" HorizontalOptions="Center" Margin="10,0,0,20"/>
+
+                <Entry x:Name="numberEntry" Placeholder="Entrez un nombre entier" Keyboard="Numeric" Margin="10,0,0,10"/>
+
+                <Button Text="Tester le nombre" Clicked="OnTestClicked" Margin="10,0,0,10" BackgroundColor="#00563F"/>
+
+                <Label x:Name="resultLabel" TextColor="Red" Margin="10,0,0,20"/>
+
+                <Label x:Name="heartsLabel" Text="❤❤❤❤❤" HorizontalOptions="Center"/>
+
+                <Button Text="Réinitialiser" Clicked="OnResetClicked" Margin="10,0,0,10" BackgroundColor="#00563F"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
