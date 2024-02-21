@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\coeur.gif" />
 	  <None Remove="Resources\Images\ecran.png" />
 	</ItemGroup>
 

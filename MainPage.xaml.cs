@@ -15,18 +15,10 @@ namespace MauiApp1
 		private string Hearts = "❤❤❤❤❤";
 
 
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-			public MainPage()
+		public MainPage()
 		{
 			InitializeComponent();
 			GenerateNumberToGuess();
-		}
-
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 
 		private void GenerateNumberToGuess()
@@ -53,7 +45,7 @@ namespace MauiApp1
 			}
 		}
 
-		  
+
 
 		private void CheckGuess()
 		{
@@ -97,12 +89,12 @@ namespace MauiApp1
 				if (Guess == NumberToGuess)
 				{
 					resultLabel.Text = "Félicitations! Vous avez deviné le nombre mystère!";
-					resultLabel.TextColor = Color.FromHex("#00FF00");
+					resultLabel.TextColor = Color.FromHex("#ffffff");
 				}
 				else
 				{
 					resultLabel.Text = ErrorMessage;
-					resultLabel.TextColor = Color.FromHex("#FF0000");
+					resultLabel.TextColor = Color.FromHex("#ffffff");
 				}
 			}
 			else
@@ -110,12 +102,12 @@ namespace MauiApp1
 				if (!string.IsNullOrEmpty(ErrorMessage))
 				{
 					resultLabel.Text = ErrorMessage;
-					resultLabel.TextColor = Color.FromHex("#FF0000");
+					resultLabel.TextColor = Color.FromHex("#ffffff");
 				}
 				else
 				{
 					resultLabel.Text = $"Tentatives restantes: {AttemptsLeft} {Hearts}";
-					resultLabel.TextColor = Color.FromHex("#000000"); // Noir
+					resultLabel.TextColor = Color.FromHex("#ffffff");
 				}
 			}
 		}

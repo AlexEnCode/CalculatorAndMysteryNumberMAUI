@@ -1,28 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp1.MainPage">
+             x:Class="MauiApp1.MainPage" >
 
-    <ContentPage.BackgroundImageSource>
-        <FileImageSource File="ecran.png" />
-    </ContentPage.BackgroundImageSource>
+    <ContentPage.BackgroundColor>
+        <Color>#8fe2b0</Color>
+    </ContentPage.BackgroundColor>
 
     <ScrollView>
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <StackLayout Margin="20">
-                <Label TextColor="#5997E1" Text="Le jeu du nombre mystère!" FontSize="40" HorizontalOptions="Center" Margin="10,0,0,20"/>
+                <Label TextColor="#fff" Text="Le jeu du nombre mystère!" FontSize="35" HorizontalOptions="Center" Margin="10,0,0,20"/>
 
-                <Label TextColor="#5997E1" Text="Cherchez le nombre mystère entre 1 et 20! Nous vous dirons si votre proposition est trop petite, ou bien trop grande! Vous avez 5 chances avant la mort par décès." FontSize="25" HorizontalOptions="Center" Margin="10,0,0,20"/>
+                <Label TextColor="#fff" Text="Cherchez le nombre mystère entre 1 et 20! &#x0a;Nous vous dirons si votre proposition est trop petite, ou bien trop grande! &#x0a;Vous avez 5 chances avant la mort par décès." FontSize="18" HorizontalOptions="Center" Margin="10,0,0,20"/>
 
-                <Entry x:Name="numberEntry" Placeholder="Entrez un nombre entier" Keyboard="Numeric" Margin="10,0,0,10" FontSize="16" WidthRequest="150"/>
+                <Entry x:Name="numberEntry" 
+       Placeholder="Nombre " 
+       Keyboard="Numeric" 
+       Margin="10"
+              FontSize="16" 
+       MaxLength="5" 
+       BackgroundColor="#F0F0F0"
+       TextColor="#333333"
+       WidthRequest="100"
+       HorizontalOptions="FillAndExpand"/>
 
-                <Button Text="Tester" Clicked="OnTestClicked" Margin="10,0,0,10" BackgroundColor="#5997E1" FontSize="16" WidthRequest="150"/>
+                <Button Text="Tester" Clicked="OnTestClicked" Margin="10,0,0,10" BackgroundColor="#26d07c" FontSize="16" WidthRequest="150"/>
 
-                <Label x:Name="resultLabel" TextColor="IndianRed" Margin="10,0,0,20" FontSize="25"/>
+                <Label x:Name="heartsLabel" Text="❤❤❤❤❤" HorizontalOptions="Center" FontSize="25"/>
+                <Label x:Name="resultLabel" Margin="10,0,0,20" FontSize="20" HorizontalOptions="Center"/>
 
-                <Label x:Name="heartsLabel" Text="❤❤❤❤❤" HorizontalOptions="Center"/>
-
-                <Button Text="Réinitialiser" Clicked="OnResetClicked" Margin="10,0,0,10" BackgroundColor="#5997E1" FontSize="16" WidthRequest="150"/>
+                <Button Text="Réinitialiser" Clicked="OnResetClicked" Margin="10,0,0,10" BackgroundColor="#26d07c" FontSize="16" WidthRequest="150"/>
             </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
